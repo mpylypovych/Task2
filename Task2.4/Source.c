@@ -79,7 +79,8 @@ int main()
 	}
 
 	qsort(data,n,sizeof(struct DATA),CompareCodes);
-
+	
+	printf("\nSorted array:\n\n");
 	for (int i = 0; i < n; i+=1)
 		printf("%i %s\n", data[i].code, data[i].message);
 
@@ -87,7 +88,7 @@ int main()
 	for (int i = 0; i < n; i += 1)
 		ans += CheckCode(data[i].code);
 
-	printf("The number of messages with code, containing 2 same adjacent digits%i\n", ans);
+	printf("The number of messages with code, containing same adjacent digits:\n%i\n", ans);
 	printf("Press Enter to exit.\n");
 	getchar(); getchar();
 
