@@ -19,10 +19,7 @@ struct DATA
 	char message[MAX_MESSAGE_LENGTH];
 };
 
-/**
-* @brief This is a compare function for DATA variables
-* @return int
-*/
+
 
 int CompareCodes(const void *a, const void *b)
 {
@@ -33,17 +30,7 @@ int CompareCodes(const void *a, const void *b)
 	return y-x;
 }
 
-/**
-* @brief This function checks if the number has two sequential same digits
-* @param [in] aData Sorts array elements iFirstElmt..iLastElmt
-* @param [in] iFirstElmt Index of first element to sort, 0 <= iFirstElmt < iLastElmt
-* @param [in] iLastElmt Index of last element to sort, iFirstElmt < iLastElmt< aData.length
-* @pre Each aData member should have comparable value
-* @post aData is sorted
-* @remark blah blah
-* @return void
 
-*/
 bool CheckCode(unsigned long ix)
 {
 	bool b = 0;
@@ -71,8 +58,8 @@ int main()
 
 	void* pTemp = malloc(n*sizeof(struct DATA));
 	struct DATA* data = pTemp;
-	printf("For each message enter the code, press Enter, then enter the messages itself:\n");
-	for (int i = 0; i < n; i+=1)
+	printf("For each message enter the code, press Enter, then enter the message itself:\n");
+	for (unsigned long i = 0; i < n; i+=1)
 	{
 		data[i].code = getNumber();
 		scanf("%s", (data[i].message));

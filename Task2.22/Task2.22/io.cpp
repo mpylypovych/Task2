@@ -64,7 +64,7 @@ unsigned int GetUInt()
 			printf("Wrong input. Try again\n");
 			continue;
 		}
-		else if ((strlen(cBuffer) > 5) || (x>1000))
+		else if ((strlen(cBuffer) > 5) || (x > 1000) || (x == 0))
 		{
 			printf("Wrong input. Try again\n");
 			if (strlen(cBuffer) > 5)

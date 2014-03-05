@@ -5,7 +5,7 @@
 
 char Initialize(POINT** points, unsigned* n)
 {
-	printf("Please enter number of points(0-1000)\n");
+	printf("Please enter number of points(1-1000)\n");
 	*n = GetUInt();
 	*points = (POINT*)malloc((*n)*sizeof(POINT));
 	if (!points)
